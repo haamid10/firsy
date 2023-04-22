@@ -1,5 +1,5 @@
 {
-  "name": "redi",
+  "name": "reddit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "reddit": "./reddit.mjs"
+    "reddit": "reddit.js"
   },
   "keywords": [],
   "author": "",
