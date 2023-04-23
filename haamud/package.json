@@ -6,13 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "haamud": "reddit.js"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    
-  }
+  "license": "ISC"
 }
