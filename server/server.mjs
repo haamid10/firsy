@@ -1,11 +1,11 @@
 import express from 'express'
-import pb from 'body-parser'
+import bp from 'body-parser'
 import morgan from 'morgan'
 
 const app = express()
 
-app.usse (bp.urlencoded({extended: true}))
-app.use (pb.json())
+app.use (bp.urlencoded({extended: true}))
+app.use (bp.json())
 app.use(morgan('dev'))
 
 const db = []
@@ -21,4 +21,8 @@ res.json(newTodo)
 
 app.get ('/todo', (req,res)=>{
   res.json(db)
+})
+
+app.listen(8000 ,()=> {
+  console.log('server is on')
 })
