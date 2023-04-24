@@ -24,7 +24,7 @@ app.get ('/todo', (req,res)=>{
 })
 app.get('/todo:id',(req,res)=>{
   const todo = db.find(t => {
-    return t.id =req.params.id
+    return t.id === +req.params.id
   })
   res.json({data: todo})
 })
