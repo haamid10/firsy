@@ -192,7 +192,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {},
-  "scripts": {dd
+  "scripts": {
     "test": "jest"
   },
   "author": "",
