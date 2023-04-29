@@ -23,3 +23,6 @@ Router.get ('/updatepiont/:id', ()=>{})
 Router.put ('/updatepiont/:id', ()=>{})
 Router.post ('/updatepiont', ()=>{})
 Router.delete ('/updatepiont/:id', ()=>{})
+
+
+export default router
