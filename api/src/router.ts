@@ -2,27 +2,27 @@ import {Router} from 'express'
 
 const router = Router()
 
-Router.get ('/product', ()=>{})
-Router.get ('/product/:id', ()=>{})
-Router.put ('/product/:id', ()=>{})
-Router.post ('/product', ()=>{})
-Router.delete ('/product/:id', ()=>{})
+router.get ('/product', ()=>{})
+router.get ('/product/:id', ()=>{})
+router.put ('/product/:id', ()=>{})
+router.post ('/product', ()=>{})
+router.delete ('/product/:id', ()=>{})
 
 // updates
 
-Router.get ('/update', ()=>{})
-Router.get ('/update/:id', ()=>{})
-Router.put ('/update/:id', ()=>{})
-Router.post ('/update', ()=>{})
-Router.delete ('/update/:id', ()=>{})
+router.get ('/update', ()=>{})
+router.get ('/update/:id', ()=>{})
+router.put ('/update/:id', ()=>{})
+router.post ('/update', ()=>{})
+router.delete ('/update/:id', ()=>{})
 
 // update points
 
-Router.get ('/updatepiont', ()=>{})
-Router.get ('/updatepiont/:id', ()=>{})
-Router.put ('/updatepiont/:id', ()=>{})
-Router.post ('/updatepiont', ()=>{})
-Router.delete ('/updatepiont/:id', ()=>{})
+router.get ('/updatepiont', ()=>{})
+router.get ('/updatepiont/:id', ()=>{})
+router.put ('/updatepiont/:id', ()=>{})
+router.post ('/updatepiont', ()=>{})
+router.delete ('/updatepiont/:id', ()=>{})
 
 
 export default router
