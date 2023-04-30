@@ -3,8 +3,7 @@ import {Router} from 'express'
 const router = Router()
 
 router.get ('/product', (req,res)=>{
-  res.json({message: req.shhh_secret
-  })
+  res.json({message: req.shhh_ })
 })
 router.get ('/product/:id', ()=>{})
 router.put ('/product/:id', ()=>{})
