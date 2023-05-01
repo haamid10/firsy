@@ -19,5 +19,11 @@ export const protect = (req: { headers: { authorization: any } }, res: { status:
     res.json({message: 'not authorized'})
     return
   }
+  const [,token] = bearer.split(' ')
+  if(!token){
+    res.status(401)
+    res.json({message: 'not authorized'})
+    return
+  }
 
 }
