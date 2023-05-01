@@ -12,12 +12,11 @@ app.use(express.urlencoded({extended: true}))
 
 app.use((req, res, next) => {
   req.body = 'doggy'
-  res.status(401)
-res.send('Nope')
+ next()
 })
 
 //  
-app.use('/api',protect, router)
+app.use('/api',protect as any, router)
 
 
 export default  app
