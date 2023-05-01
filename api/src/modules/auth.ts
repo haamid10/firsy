@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt';
 
 
 export const createJWT = (user: { id: any; username: any }) => {
@@ -11,7 +12,9 @@ export const createJWT = (user: { id: any; username: any }) => {
   return token
 }
 
-export const protect = (req: { headers: { authorization: any } }, res: { status: (arg0: number) => void; json: (arg0: { message: string }) => void }, next: any) => {
+export const protect = (req: {
+  [x: string]: string | jwt.JwtPayload; headers: { authorization: any } 
+}, res: { status: (arg0: number) => void; json: (arg0: { message: string }) => void }, next: any) => {
   const bearer = req.headers.authorization
 
   if (!bearer) {
@@ -26,4 +29,15 @@ export const protect = (req: { headers: { authorization: any } }, res: { status:
     return
   }
 
+  try{
+    const user = jwt.verify(token,(process as any).env.JWT_SECRET)
+    req.user= user
+  }catch(e){
+    console.error(e)
+    res.status(401)
+    res.json({message: 'not valid token'})
+    return
+
+  }
+  
 }
