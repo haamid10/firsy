@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
 
 
-export const comparePasswords = (password: any ,hash: any) => {
-   return bcrypt.compare(password,hash)
+export const comparePasswords = (password: string ,hashed: string) => {
+   return bcrypt.compare(password,hashed)
 }
-export const hashPassword = (password: any) => {
+export const hashPassword = (password: string) => {
   return bcrypt.hash(password, 5)
 }
 
@@ -45,7 +45,6 @@ export const protect = (req: {
     res.status(401)
     res.json({message: 'not valid token'})
     return
-
   }
   
 }
